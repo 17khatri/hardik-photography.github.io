@@ -47,7 +47,9 @@ export default function Header() {
           fontFamily: "cursive",
           fontSize: "24px",
           marginLeft: "12px",
+          cursor: "pointer",
         }}
+        onClick={() => navigate("/")}
       >
         Hardik Photography
       </Typography>
@@ -91,45 +93,73 @@ export default function Header() {
         open={open}
         onClose={toggleDrawer(false)}
       >
-        <Box sx={{ width: { xs: "300px", sm: "350px" , display:'flex' , justifyContent:'end', marginTop:'10px' } }}>
-          <CloseIcon sx={{ cursor: "pointer" , margin:'5px' , fontSize:'30px'  }} onClick={toggleDrawer(false)} />
+        <Box
+          sx={{
+            width: {
+              xs: "300px",
+              sm: "350px",
+              display: "flex",
+              justifyContent: "end",
+              marginTop: "10px",
+            },
+          }}
+        >
+          <CloseIcon
+            sx={{ cursor: "pointer", margin: "5px", fontSize: "30px" }}
+            onClick={toggleDrawer(false)}
+          />
         </Box>
         <Box sx={{ padding: "15px", color: "gray" }}>
-        <Divider />
+          <Divider />
           <Typography
             sx={{
               display: "flex",
               fontWeight: "700",
-              margin:'10px 0',
+              margin: "10px 0",
               alignItems: "center",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              navigate("/");
+              toggleDrawer(false)();
+              
             }}
           >
             <HomeIcon sx={{ marginRight: "15px" }} /> Home
           </Typography>
-        <Divider />
+          <Divider />
           <Typography
             sx={{
               display: "flex",
               fontWeight: "700",
-              margin:'10px 0',
+              margin: "10px 0",
               alignItems: "center",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              navigate("/contact");
+              toggleDrawer(false)();
             }}
           >
             <CallIcon sx={{ marginRight: "15px" }} /> Contact Us
           </Typography>
-        <Divider />
+          <Divider />
           <Typography
             sx={{
               display: "flex",
               fontWeight: "700",
-              margin:'10px 0',
+              margin: "10px 0",
               alignItems: "center",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              navigate("/about");
+              toggleDrawer(false)();
             }}
           >
             <InfoIcon sx={{ marginRight: "15px" }} /> About Us
           </Typography>
-        <Divider />
-          
+          <Divider />
         </Box>
       </Drawer>
     </AppBar>

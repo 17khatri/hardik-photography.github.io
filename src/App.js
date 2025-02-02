@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {  Box, Typography } from "@mui/material";
 import Header from "./components/Header";
-import Home from "./components/home";
+import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import WeddingGallery from "./components/Events/WeddingGallery";
